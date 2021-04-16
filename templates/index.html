@@ -4,15 +4,9 @@
 
 <h1>Rock Paper Scissors Game</h1>
 
-{#<form action="/game" method="POST">#}
-    {# <label for="player1-choice">Player One Choice</label>#}
-    {# <input type="text" name='player1-choice' id='player1-choice'>#}
-    {# <label for="player2-choice">Player Two Choice</label>#}
-    {# <input type="text" name="player2-choice" id='player2-choice'>#}
-    {# <input type="submit" value="Play!">#}
-    {#</form>#}
 
-<form action="/game">
+
+<form action="/" method="POST">
     <label for="gesture1">Player One, Please Choose a Gesture:</label>
     <select name="gesture1" id="gesture1">
         <option value="Scissors">Scissors</option>
@@ -20,9 +14,6 @@
         <option value="Paper">Paper</option>
     </select>
     <br><br>
-</form>
-
-<form action="/game">
     <label for="gesture2">Player Two, Please Choose a Gesture:</label>
     <select name="gesture2" id="gesture2">
         <option value="Scissors">Scissors</option>
@@ -33,11 +24,8 @@
     <input type="submit" value="Submit">
 </form>
 
-<div>
-    <p>
-        Winner is: {{game.winner}} 
-     
-    </p>
-</div>
+<h1> The Winer is: {{winner}}</h1>
+
+
 
 {% endblock %}

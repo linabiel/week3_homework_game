@@ -1,15 +1,17 @@
 from flask import render_template, request
 from app import app
 from modules import player
-from modules.game import compare_choices
+from modules.game import Game
 
-@app.route('/game')
+@app.route('/')
 def index():
     return render_template('index.html', title='Home')
 
 
-@app.route('/game', methods=['POST'])
-def play_game(self):
-    player1 = request.form['gesture1']
-    player2 = request.form['gesture2']
-    compare_choices(self, player1, player2)
+@app.route('/<player1><player2>', methods=['POST'])
+def play_game(player1, player2):
+    # player1 = request.form['gesture1']
+    # player2 = request.form['gesture2']
+    game = Game()
+    # winner = game.compare_choices(player1, player2)
+    return render_template('index.html', winner=game.compare_choices(player1, player2))
