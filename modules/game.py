@@ -15,3 +15,5 @@ def play(gesture1, gesture2):
         return "Player 2 wins by playing Scissors"
     if gesture1 == "scissors" and gesture2 == "paper":
         return "Player 1 wins by playing Scissors"
+
+# def select_gesture():

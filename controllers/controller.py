@@ -10,3 +10,7 @@ def index():
 @app.route('/<gesture1>/<gesture2>')
 def play_game(gesture1, gesture2):
     return render_template('play.html', winner=play(gesture1, gesture2))
+
+# @app.route('/<gesture1>/<gesture2>', methods=["POST"])
+# def use_selection(gesture1, gesture2):
+#
