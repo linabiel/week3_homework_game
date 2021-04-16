@@ -1,0 +1,11 @@
+body {
+    background-color: slategray;
+}
+
+h1 {
+    color: lavenderblush;
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    border: 4px solid tomato;
+}

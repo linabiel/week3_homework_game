@@ -1,13 +1,17 @@
-class Game:
-    
-    def compare_choices(self, player1, player2):
-        if player1.choise == player2.choise:
-            return None
-        else:
-            if player1.choice == "Rock" and player2.choice == "Scissors":
-                return player1
-            if player1.choice == "Rock" and player2.choice == "Paper":
-                return player2
-            if player1.choice == "Paper" and player2.choice == "Scissors":
-                return player2
+def play(gesture1, gesture2):
+    if gesture1 == gesture2:
+        return None
+    if gesture1 == "rock" and gesture2 == "scissors":
+        return "Player 1 wins by playing Rock"
+    if gesture1 == 'scissors' and gesture2 == 'rock':
+        return "Player 2 wins by playing Rock"
 
+    if gesture1 == "rock" and gesture2 == "paper":
+        return "Player 2 wins by playing Paper"
+    if gesture1 == "paper" and gesture2 == "rock":
+        return "Player 1 wins by playing Paper"
+
+    if gesture1 == "paper" and gesture2 == "scissors":
+        return "Player 2 wins by playing Scissors"
+    if gesture1 == "scissors" and gesture2 == "paper":
+        return "Player 1 wins by playing Scissors"
