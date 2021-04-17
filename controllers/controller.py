@@ -3,13 +3,22 @@ from app import app
 from modules.game import play
 
 @app.route('/')
-def index():
-    return render_template('index.html', title='Home')
+def home():
+    return render_template('index.html')
 
 @app.route('/<gesture1>/<gesture2>')
 def enter_gestures_into_url(gesture1, gesture2):
     return render_template('url.html', winner=play(gesture1, gesture2))
 
-@app.route('/play', methods=['POST', 'GET'])
-def play_game():
-    return render_template('play.html', title='Home')
+@app.route('/play')
+def select_gesture_get():
+    return render_template('play.html')
+
+@app.route('/play', methods=['POST'])
+def select_gesture():
+    gesture1 = request.form["gesture1"]
+    gesture2 = request.form['gesture2']
+    print(gesture1)
+    print(gesture2)
+    print(play(gesture1, gesture2))
+    return render_template('url.html', winner=play(gesture1, gesture2))

@@ -4,6 +4,22 @@
     <h1>Rock Paper Scissors Game</h1>
 {% endblock %}
 
-
 {% block body %}
+    <form action="/play" method="POST">
+        <label for="gesture1" id="'selector1">Player One, Please Choose a Gesture:</label>
+        <select name="gesture1" id="gesture1">
+            <option value="scissors">scissors</option>
+            <option value="rock">rock</option>
+            <option value="paper">paper</option>
+        </select>
+        <br><br>
+        <label for="gesture2" id="'selector2">Player Two, Please Choose a Gesture:</label>
+        <select name="gesture2" id="gesture2">
+            <option value="scissors">scissors</option>
+            <option value="rock">rock</option>
+            <option value="paper">paper</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
 {% endblock %}
