@@ -1,13 +1,10 @@
-<html>
-<head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <title>{{ title }} - Rock Paper Scissors Game</title>
-</head>
+{% extends 'base.html' %}
 
+{% block head %}
 <h1>Rock Paper Scissors Game</h1>
-<body>
+{% endblock %}
 
-
+{% block body %}
 <form action="/" method="POST">
     <label for="gesture1" id="'selector1">Player One, Please Choose a Gesture:</label>
     <select name="gesture1" id="gesture1">
@@ -25,8 +22,5 @@
     <br><br>
     <input type="submit" value="Submit">
 </form>
-
-
-</body>
-</html>
+{% endblock %}
 

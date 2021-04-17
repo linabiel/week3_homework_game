@@ -1,6 +1,7 @@
 def play(gesture1, gesture2):
     if gesture1 == gesture2:
         return None
+
     if gesture1 == "rock" and gesture2 == "scissors":
         return "Player 1 wins by playing Rock"
     if gesture1 == 'scissors' and gesture2 == 'rock':
