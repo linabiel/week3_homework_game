@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <h1>Rock Paper Scissors Game</h1>
+    <h1>YOU VS. THE COMPUTER</h1>
+{% endblock %}
+
+{% block body %}
+    <form action="/comp" method="POST">
+        <label for="gesture2" id="'selector2">Player, Please Choose a Gesture:</label>
+        <select name="gesture2" id="gesture2">
+            <option value="Scissors">Scissors</option>
+            <option value="Rock">Rock</option>
+            <option value="Paper">Paper</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}
