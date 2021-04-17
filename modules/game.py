@@ -1,4 +1,6 @@
 def play(gesture1, gesture2):
+    gesture1 = gesture1.lower()
+    gesture2 = gesture2.lower()
     if gesture1 == gesture2:
         return None
     if gesture1 == "rock" and gesture2 == "scissors":
