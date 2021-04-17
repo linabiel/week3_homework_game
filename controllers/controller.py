@@ -28,4 +28,5 @@ def play_against_computer_get():
 def play_against_computer():
     gesture1 = generate_computer_gesture()
     gesture2 = request.form['gesture2']
-    return render_template('url.html', winner=play(gesture1, gesture2))
+    return render_template('com_vs_you_win_page.html',
+                           winner=play(gesture1, gesture2), computer_gesture=gesture1.capitalize())
