@@ -1,6 +1,6 @@
 from flask import render_template, request
 from app import app
-from modules.game import play, generate_computer_gesture
+from models.game import play, generate_computer_gesture
 
 @app.route('/')
 def home():
