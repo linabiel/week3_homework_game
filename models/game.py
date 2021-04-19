@@ -1,4 +1,4 @@
-import randomgaa
+import random
 
 def play(gesture1, gesture2):
     gesture1 = gesture1.lower()
